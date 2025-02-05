@@ -1,0 +1,14 @@
+class Solution {
+    public int missingNumber(int[] arr) {
+        Arrays.sort(arr); // Sort the array
+        int smallest = 1; // Start checking from 1
+        
+        for (int num : arr) {
+            if (num == smallest) {
+                smallest++; // Move to the next expected number
+            }
+        }
+        
+        return smallest; // Return the first missing number
+    }
+}
